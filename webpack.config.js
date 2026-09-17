@@ -19,11 +19,12 @@ export default{
   },
   resolve: {
     extensions: [".js", ".jsx"], // project extentions that webpack should identify
+        alias:{
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@styles': path.resolve(__dirname, 'src/styles'),
+        },
     },
-    alias:{
-      '@components': path.resolve(__dirname, 'src/components/'),
-      '@styles': path.resolve(__dirname, 'src/styles/'),
-    },
+    
     mode: 'production',
     module:{
         rules:[
